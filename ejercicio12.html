@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var num1 = parseInt(prompt('Ingrese primer número: '));
+        var num2 = parseInt(prompt('Ingrese segundo número: '));
+        var num3 = parseInt(prompt('Ingrese tercer número: '));
+        function numerordenados(x1, x2, x3) {
+            if (x1 < x2 && x1 < x3) {
+                document.write(x1 + ' ');
+                if (x2 < x3) {
+                    document.write(x2 + ' ' + x3);
+                } else {
+                    document.write(x3 + ' ' + x2);
+                }
+            } else {
+                if (x2 < x3) {
+                    document.write(x2 + ' ');
+                    if (x1 < x3) {
+                        document.write(x1 + ' ' + x3);
+                    } else {
+                        document.write(x3 + ' ' + x1);
+                    }
+                } else {
+                    document.write(x3 + ' ');
+                    if (x1 < x2) {
+                        document.write(x1 + ' ' + x2);
+                    } else {
+                        document.write(x2 + ' ' + x1);
+                    }
+                }
+            }
+        }
+    
+        document.write('Los tres números ingresados son: ' + num1 + ' ' + num2 + ' ' + num3 );
+        document.write('<br>');
+        document.write('Los números ordenados de menor a mayor son: ');
+        numerordenados(num1, num2, num3);
+    </script>
+</body>
+</html>
+

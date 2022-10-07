@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+</head>
+<body>
+    <script>
+        var negativos = 0;
+        var positivos = 0;
+        var multiplos = 0;
+        var sumapares = 0;
+        var valor;
+        for (var f = 1; f <= 10; f++) {
+            var valor = parseInt(prompt('Ingrese un valor:'));
+            if (valor < 0) {
+                negativos++;
+            } else {
+                if (valor > 0) {
+                    positivos++;
+                }
+            }
+            if (valor % 15 == 0 && valor != 0) {
+                multiplos++;
+            }
+            if (valor % 2 == 0) {
+                sumapares = sumapares + valor;
+            }
+        }
+        document.write('Cantidad de valores negativos: ',negativos);
+        document.write('<br>');
+        document.write('Cantidad de valores positivos: ',positivos);
+        document.write('<br>');
+        document.write('Cantidad de múltiplos de 15: ',multiplos);
+        document.write('<br>');
+        document.write('Suma de los valores pares ingresados: ',sumapares);
+        document.write('<br>');
+    </script>
+</body>
+</html>
+
